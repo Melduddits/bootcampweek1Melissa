@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="InspectionOverview">
+    <meta name="author" content="">
+
+    <title>Inspection Overview</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+
+
+    <link rel="stylesheet" href="Styles.css">
+    <script src="Scripts\Scripts.js"></script>
+</head>
+
+<body>
+
+    <input type="button" value="A" onclick="dezelettergeklikt('A');">
+    <input type="button" value="B" onclick="dezelettergeklikt('B');">
+    <input type="button" value="C" onclick="dezelettergeklikt('C');">
+    <input type="button" value="D" onclick="dezelettergeklikt('D');">
+
+    <div id="dezelettergeklikt"></div> 
+
+</body>
+
+    <script>
+        function dezelettergeklikt(letter){
+            var divtext = "op deze knop " + letter + " geklikt <br>"
+            document.getElementById("dezelettergeklikt").innerHTML += divtext;
+            }
+    </script>
+</html>
