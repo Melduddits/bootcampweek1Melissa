@@ -17,20 +17,32 @@
 </head>
 
 <body>
-
+    <input type="buton"  value="overview" onclick="GoToOverview();"> <br>
     <input type="button" value="A" onclick="dezelettergeklikt('A');">
     <input type="button" value="B" onclick="dezelettergeklikt('B');">
     <input type="button" value="C" onclick="dezelettergeklikt('C');">
     <input type="button" value="D" onclick="dezelettergeklikt('D');">
 
-    <div id="dezelettergeklikt"></div> 
+    <div id="displayTekst"></div> 
 
 </body>
 
     <script>
-        function dezelettergeklikt(letter){
+    var optelC = 0;
+    var letterac = 0;
+
+    function dezelettergeklikt(letter) {
+        case "C";
+        optelC++
+        letterac = optelC
+        break;
+    }
+    
+     if (document.getElementById("displayTekst").innerHTML.includes("op deze knop " + letter + " geklikt" )){
+        alert("al geklikt" ); 
+        } else {
             var divtext = "op deze knop " + letter + " geklikt <br>"
-            document.getElementById("dezelettergeklikt").innerHTML += divtext;
-            }
+            document.getElementById("displayTekst").innerHTML += divtext;  
+    }
     </script>
 </html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="InspectionOverview">
+    <meta name="author" content="">
+
+    <title>Inspection Overview</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+</head>
+
+<body>
+    <input type="button" value="AFBA" onclick="Volgend('plaatjeA');"> <br>
+    <p>4 seizoenen, 4 plaatjes</p>
+    <input type="button" value="AFBB" onclick="Volgend('plaatjeB');"> <br>
+    <input type="button" value="KNC" onclick="vergelijk();"> <br>
+
+    <p>dit seizoen:</p>
+    <div id="plaatjeA"></div>
+    <div id="plaatjeB"></div>
+    
+</body>
+
+<script>
+    var seizoen = 0;
+    var seizoenA = 0;
+    var seizoenB = 0;
+    
+    function vergelijk(){
+        if( document.getElementById("plaatjeA").innerHTML == document.getElementById("plaatjeB").innerHTML){
+                console.log("hetzelfde")
+        } else {
+            console.log("niet hetzelfde")
+        }
+    }
+
+    function Volgend(harold) {
+        if (harold == "plaatjeA" ){
+            if (seizoenA ==4){
+                seizoenA =1
+            } else {
+                seizoenA ++
+            }
+            seizoen = seizoenA
+        } else {
+            if (seizoenB ==4){
+                seizoenB =1
+            } else {
+                seizoenB ++
+            }
+            seizoen = seizoenB
+        }
+    
+           switch (seizoen){
+            case 1:
+            document.getElementById(harold).innerHTML= "<img src=\"https://blog.westfalengassen.nl/wp-content/uploads/2018/07/zomer.jpg\">"
+            break;
+            case 2:
+            document.getElementById(harold).innerHTML= "<img src=\"https://www.peterhahn.nl/magazine/wp-content/uploads/sites/2/1_herbst-outfits-1.jpg\">"
+            break;
+            case 3:
+            document.getElementById(harold).innerHTML= "<img src=\"https://www.elle.be/nl/wp-content/uploads/2018/12/winter_v.jpg.webp\">"
+            break;
+            case 4:
+            document.getElementById(harold).innerHTML= "<img src=\"https://infobron.nl/afbeelding/1692/Wanneer-begint-de-lente\">"
+            break;
+        }
+    }
+    </script>
+</html>
